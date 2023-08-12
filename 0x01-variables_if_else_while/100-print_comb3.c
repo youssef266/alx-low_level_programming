@@ -13,15 +13,15 @@ int main(void)
 	int a = '0';
 	int b = '0';
 
-	while (a <= '7')
+	while (a <= '8')
 	{
-		while (b <= '7')
+		while (b <= '8')
 		{
 			if (!(a > b) || a == b)
 			{
 				putchar(a);
 				putchar(b);
-				if (a == '6' && b == '7')
+				if (a == '8' && b == '9')
 				{
 					putchar('\n');
 				}
