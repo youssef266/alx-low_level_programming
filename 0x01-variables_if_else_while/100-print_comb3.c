@@ -10,22 +10,19 @@
 
 int main(void)
 {
-	int a = '0';
-	int b = '0';
+	int a = 0, b;
 
-	while (a <= '8')
+	while (a <= 9)
 	{
-		while (b <= '8')
+		b = 0;
+		while (b <= 9)
 		{
-			if (!(a > b) || a == b)
+			if (a != b && a < b)
 			{
-				putchar(a);
-				putchar(b);
-				if (a == '8' && b == '8')
-				{
-					putchar('\n');
-				}
-				else
+				putchar(a + 48);
+				putchar(b + 48);
+
+				if (a + b != 17)
 				{
 					putchar(',');
 					putchar(' ');
@@ -33,8 +30,8 @@ int main(void)
 			}
 			b++;
 		}
-		b = '0';
 		a++;
 	}
-return (0);
+	putchar('\n');
+	return (0);
 }
