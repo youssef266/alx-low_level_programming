@@ -4,7 +4,7 @@
  * main - entery point
  *
  * Description: prints the first 50 Fibonacci numbers
- *		starting with 1 ,2 
+ *		starting with 1 ,2
  *
  * Return: always 0
 */
