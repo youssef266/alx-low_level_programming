@@ -3,8 +3,9 @@
 /**
  * print_diagonal - function that prints diagonal
  *
- * @n: input parm
+ * @n: nuber of times the '\' should be printed
  *
+ * Return: void
 */
 
 void print_diagonal(int n)
