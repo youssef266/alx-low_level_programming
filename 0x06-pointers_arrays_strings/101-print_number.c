@@ -2,7 +2,7 @@
 
 /**
  * print_number - a function that prints an integer.
- * @n: input
+ * @n: input patrameter
  *
  * Return: 0
 */
