@@ -13,40 +13,42 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int carry = 0;
-	int len1 = strlen(n1);
-	int len2 = strlen(n2);
-	int max_len = len1 > len2 ? len1 : len2;
-	int i, j, k;
+	int i = 0, j = 0, k, l = 0, f, s, d = 0;
 
-	if (max_len + 1 > size_r)
-	{
+	while (n1[i] != '\0')
+		i++;
+	while (n2[j] != '\0')
+		j++;
+	if (i > j)
+		l = i;
+	else
+		l = j;
+	if (l + 1 > size_r)
 		return (0);
-	}
-
-	r[max_len + 1] = '\0';
-
-	for (i = len1 - 1, j = len2 - 1, k = max_len; k >= 0; i--, j--, k--)
+	r[l] = '\0';
+	for (k = l - 1; k >= 0; k--)
 	{
-		int digit1 = (i >= 0) ? n1[i] - '0' : 0;
-		int digit2 = (j >= 0) ? n2[j] - '0' : 0;
-
-		int sum = digit1 + digit2 + carry;
-
-		carry = sum / 10;
-		r[k] = (sum % 10) + '0';
+		i--;
+		j--;
+		if (i >= 0)
+			f = n1[i] - '0';
+		else
+			f = 0;
+		if (j >= 0)
+			s = n2[j] - '\0';
+		else
+			s = 0;
+		r[k] = (f + s + d) % 10 + '0';
+		d = (f + s + d) / 10;
 	}
-
-	if (carry > 0)
+	if (d == 1)
 	{
-
-		if (max_len + 2 > size_r)
-		{
+		r[l + 1] = '\0';
+		if (l + 2 > size_r)
 			return (0);
-		}
-		memmove(r + 1, r, max_len + 1);
-		r[0] = carry + '0';
+		while (l-- >= 0)
+			r[l + 1] = r[l];
+		r[0] = d + '0';
 	}
-
 	return (r);
 }
