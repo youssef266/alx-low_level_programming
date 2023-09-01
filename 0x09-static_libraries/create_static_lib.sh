@@ -1,3 +1,2 @@
 #!/bin/bash
-gcc -c *.c
-ar rm libmy.a *.o
+gcc -c *.c && ar rm libmy.a *.o
