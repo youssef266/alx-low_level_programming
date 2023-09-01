@@ -1,0 +1,19 @@
+#include <stdio.h>
+/**
+ * main - entry point
+ * @argc: input int
+ * @argv: input char
+ *
+ * Return: 0
+*/
+
+int main(int argc, char *argv[])
+{
+	for (int i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
+
+	return (0);
+}
+
