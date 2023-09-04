@@ -18,10 +18,11 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	i = 0;
 	while (str[i] != '\0')
 		i++;
 
-	duplicate = (char *)malloc(strlen(str) + 1);
+	duplicate = malloc(sizeof(char) * (i + 1));
 
 	if (duplicate == 0)
 	{
