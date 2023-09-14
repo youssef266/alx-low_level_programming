@@ -5,7 +5,7 @@
  * of all its parameters.
  *
  * @n: the paramters passed
- * @...: the variable calculate the sum 
+ * @...: the variable calculate the sum
  *
  * Return: if n == 0 , 0
  *	else - the sum of parameters
