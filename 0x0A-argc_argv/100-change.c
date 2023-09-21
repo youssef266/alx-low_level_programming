@@ -7,7 +7,7 @@
  *
  * Return: 0
 */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	int cents = atoi(argv[1]);
 	int coins = 0;
