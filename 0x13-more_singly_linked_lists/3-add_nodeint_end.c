@@ -23,8 +23,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = newer;
+		return (newer);
 	}
 
 	while (temporary->next)
