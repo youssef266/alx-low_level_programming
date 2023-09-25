@@ -11,14 +11,16 @@
 */
 *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int number = 0;
-	listint_t *temporary = head;
+	unsigned int i = 0;
+	listint_t *temp = head;
 
-	while (temporary && number < index)
+	while (temp && i < index)
 	{
-		temporary = temporary->next;
-		number++;
+		temp = temp->next;
+		i++;
 	}
-	return (temporary ? temporary : NULL);
+
+	return (temp ? temp : NULL);
+
 
 }
