@@ -14,15 +14,17 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int number = 0;
 	listint_t *temporary = head;
 
-	if (head == NULL)
-		return;
 	while (temporary && number < index)
 	{
 		temporary = temporary->next;
 		number++;
 	}
-
-	return (temporary);
-
+	if (temporary)
+	{
+		return (temporary);
+	} else
+	{
+		return (NULL);
+	}
 
 }
