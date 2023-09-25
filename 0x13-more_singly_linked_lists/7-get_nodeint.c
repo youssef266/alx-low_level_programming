@@ -19,6 +19,6 @@
 		temporary = temporary->next;
 		number++;
 	}
-	return (temporary);
+	return (temporary ? temporary : NULL);
 
 }
