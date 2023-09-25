@@ -14,8 +14,6 @@
 	unsigned int number = 0;
 	listint_t *temporary = head;
 
-	if (head == NULL)
-		return;
 	while (temporary && number < index)
 	{
 		temporary = temporary->next;
