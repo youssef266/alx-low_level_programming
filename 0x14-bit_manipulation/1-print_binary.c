@@ -20,7 +20,7 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('1');
 			counter++;
-		}else if (counter)
+		} else if (counter)
 		{
 			_putchar('0');
 		}
