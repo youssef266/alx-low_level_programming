@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_bit -a function that sets a val of a bit to 1 
+ * set_bit -a function that sets a val of a bit to 1
  * at a given index
  * @n: a pointer of type n
  * @index: a var for the index of unsigned int
