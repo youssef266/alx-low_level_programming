@@ -2,25 +2,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * create_buff_file - Allocates 1024 bytes for a buffer.
- * @file: The name of the file buffer is storing chars for.
+ * create_buff_file - a function that Allocates
+ * 1024 bytes for a buffer.
+ * @file: var that stored the file name
  *
  * Return: A pointer to the newly-allocated buffer.
  */
 char *create_buff_file(char *file)
 {
-	char *buffer;
+	char *buff;
 
-	buffer = malloc(sizeof(char) * 1024);
+	buff = malloc(sizeof(char) * 1024);
 
-	if (buffer == NULL)
+	if (buff == NULL || buff == 0)
 	{
 		dprintf(STDERR_FILENO,
 			"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
-	return (buffer);
+	return (buff);
 }
 
 /**
