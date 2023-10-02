@@ -26,15 +26,15 @@ char *create_buff_file(char *file)
 
 /**
  * close_file - a function that closes an opened file
- * @fdescripton: The file descripton to be closed.
+ * @fdescripton: a pram of the file description
  */
 void close_file(int fdescripton)
 {
-	int c;
+	int close_f;
 
-	c = close(fdescripton);
+	close_f = close(fdescripton);
 
-	if (c == -1)
+	if (close_f == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdescripton);
 		exit(100);
