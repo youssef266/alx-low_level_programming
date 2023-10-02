@@ -25,10 +25,10 @@ char *create_buff_file(char *file)
 }
 
 /**
- * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
+ * close_file - a function that closes an opened file
+ * @fdescripton: The file descripton to be closed.
  */
-void close_file(int fd)
+void close_file(int fdescripton)
 {
 	int c;
 
