@@ -55,42 +55,42 @@ void close_file(int fdescripton)
  */
 int main(int argc, char *argv[])
 {
-	int from, to, r, w;
-	char *buffer;
+		int from_file, to_file, read_in, write_in;
+	char *buff;
 
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	buffer = create_buff_file(argv[2]);
-	from = open(argv[1], O_RDONLY);
-	r = read(from, buffer, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	buff = create_buff_file(argv[2]);
+	from_file = open(argv[1], O_RDONLY);
+	read_in = read(from_file, buff, 1024);
+	to_file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (from == -1 || r == -1)
+		if (from_file == -1 || read_in == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
-			free(buffer);
+			free(buff);
 			exit(98);
 		}
-		w = write(to, buffer, r);
-		if (to == -1 || w == -1)
+		write_in = write(to_file, buff, read_in);
+		if (to_file == -1 || write_in == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
-			free(buffer);
+			free(buff);
 			exit(99);
 		}
-		r = read(from, buffer, 1024);
-		to = open(argv[2], O_WRONLY | O_APPEND);
+		read_in = read(from_file, buff, 1024);
+		to_file = open(argv[2], O_WRONLY | O_APPEND);
 
-	} while (r > 0);
-	free(buffer);
-	close_file(from);
-	close_file(to);
+	} while (read_in > 0);
+	free(buff);
+	close_file(from_file);
+	close_file(to_file);
 	return (0);
 }
 
