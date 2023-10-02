@@ -32,11 +32,11 @@ void close_file(int fdescripton)
 {
 	int c;
 
-	c = close(fd);
+	c = close(fdescripton);
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdescripton);
 		exit(100);
 	}
 }
