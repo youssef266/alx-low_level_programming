@@ -1,5 +1,4 @@
 all: execut_command
 
 execut_command:
-	gcc main.c -o school
-    gcc school.c -o school
+	gcc main.c school.c -o school
