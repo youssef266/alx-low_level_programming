@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""""""
+
 
 def island_perimeter(grid):
     """
@@ -19,9 +21,8 @@ def island_perimeter(grid):
     for i in range(rows):
         for j in range(cols):
             if grid[i][j] == 1:
-                perimeter += 4  # Start with the assumption of a full square perimeter
+                perimeter += 4
 
-                # Check adjacent cells and subtract 1 for each neighboring land cell
                 if i > 0 and grid[i - 1][j] == 1:
                     perimeter -= 1
                 if i < rows - 1 and grid[i + 1][j] == 1:
