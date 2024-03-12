@@ -1,14 +1,15 @@
 #include "search_algos.h"
 
 /**
- * recursive_search - searches for a value in an array of
- * integers using the Binary search algorithm
+ * recursive_search - this function searches for a
+ * value in an array of integers using the Binary search algorithm
  *
  *
- * @array: input array
+ * @array: input for the array
  * @size: size of the array
- * @value: value to search in
- * Return: index of the number
+ * @value: value to search in the array
+ * Return: index of the number or -1 if not found
+ *     or the array is NULL
  */
 int recursive_search(int *array, size_t size, int value)
 {
