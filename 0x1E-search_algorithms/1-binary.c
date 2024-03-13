@@ -51,12 +51,12 @@ int recursive_search(int *array, size_t size, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int index;
+	int index_num;
 
-	index = recursive_search(array, size, value);
+	index_num = recursive_search(array, size, value);
 
-	if (index >= 0 && array[index] != value)
+	if (index_num >= 0 && array[index_num] != value)
 		return (-1);
 
-	return (index);
+	return (index_num);
 }
